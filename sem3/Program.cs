@@ -103,3 +103,40 @@ else
     Console.WriteLine("Lo sentimos, préstamo no aprobado.\n");
 }
 
+Console.WriteLine("*7 Area de figuras geometricas \n");
+Console.WriteLine("Ingresa la figura que deseas (triángulo, cuadrado o círculo):\n");
+string tipoFigura = Console.ReadLine().ToLower();
+
+if (tipoFigura == "triangulo")
+{
+    Console.WriteLine("Veamos tu triangulo\n");
+    Console.WriteLine("Ingresa la base");
+    int b = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Ingresa la altura");
+    int h = Convert.ToInt32(Console.ReadLine());
+    int resul = (b * h) / 2;
+    Console.WriteLine($"El area es de {resul}"); 
+}
+else if (tipoFigura == "cuadrado")
+{
+    Console.WriteLine("Veamos tu cuadrado\n");
+    Console.WriteLine("Ingresa la base");
+    int b1 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Ingresa la altura");
+    int h1 = Convert.ToInt32(Console.ReadLine());
+    int resul2 = (b1 * h1);
+    Console.WriteLine($"El area es de {resul2}");
+}
+else if (tipoFigura == "circulo")
+{
+    Console.WriteLine("Veamos tu circulo\n");
+    Console.WriteLine("Ingresa el radio");
+    int r1 = Convert.ToInt32(Console.ReadLine());
+    double pif = 3.1416;
+    double resul3 = (pif*(r1*r1));
+    Console.WriteLine($"El area es de {resul3}");
+}
+else
+{
+    Console.WriteLine("Figura geométrica no reconocida.");
+}
