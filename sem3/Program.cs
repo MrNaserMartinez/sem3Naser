@@ -75,15 +75,30 @@ try
 
     if (pexs % 2 == 0)
     {
-        Console.WriteLine($"El número {pexs} es par.");
+        Console.WriteLine($"El número {pexs} es par.\n");
     }
     else
     {
-        Console.WriteLine($"El número {pexs} es impar.");
+        Console.WriteLine($"El número {pexs} es impar.\n");
     }
 }
 catch (FormatException)
 {
     Console.WriteLine("Error: Por favor, ingresa un número válido.");
 }
-    
+
+Console.WriteLine("*6 Aprobacion de prestamos \n");
+Console.WriteLine("Ingresa el monto que deseas de prestamo");
+int prestamo =  Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ingresa tu edad");
+int edad1 = Convert.ToInt32(Console.ReadLine());
+
+if (edad1 > 60 || prestamo < 5000)
+{
+    Console.WriteLine("FELICIDADES, PRESTAMO APROBADO");
+}
+else
+{
+    Console.WriteLine("Lo sentimos, prestamo no aprobado");
+}
+
