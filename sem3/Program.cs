@@ -45,3 +45,22 @@ else
 {
     Console.WriteLine($"Tu producto queda en {precio} no aplica descuento\n");
 }
+
+Console.WriteLine("*4 Validar usuario y contraseña\n");
+string usuarioValido = "Naser";
+string contrasenaValida = "Holacariño123";
+
+Console.WriteLine("4 Ingrese su nombre de usuario: \n");
+string usuario = Console.ReadLine();
+Console.WriteLine("Ingrese su contraseña: \n");
+string contrasena = Console.ReadLine();
+
+if (usuario == usuarioValido && contrasena == contrasenaValida)
+{
+    Console.WriteLine("¡Acceso concedido! Bienvenido.\n");
+}
+else
+{
+    Console.WriteLine("Acceso denegado. Usuario o contraseña incorrectos.\n");
+}
+
