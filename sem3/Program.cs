@@ -88,17 +88,18 @@ catch (FormatException)
 }
 
 Console.WriteLine("*6 Aprobacion de prestamos \n");
-Console.WriteLine("Ingresa el monto que deseas de prestamo");
-int prestamo =  Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Ingresa tu edad");
+Console.WriteLine("Ingresa el monto que deseas de préstamo:");
+int prestamo = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Ingresa tu edad:");
 int edad1 = Convert.ToInt32(Console.ReadLine());
 
 if (edad1 > 60 || prestamo < 5000)
 {
-    Console.WriteLine("FELICIDADES, PRESTAMO APROBADO");
+    Console.WriteLine("FELICIDADES, ¡PRÉSTAMO APROBADO!\n");
 }
 else
 {
-    Console.WriteLine("Lo sentimos, prestamo no aprobado");
+    Console.WriteLine("Lo sentimos, préstamo no aprobado.\n");
 }
 
