@@ -24,11 +24,24 @@ int edad = Convert.ToInt32(Console.ReadLine());
 
 if (edad >= 18)
 {
-    Console.WriteLine("FELICIDADES, SI PUEDES ENTRAR"); 
+    Console.WriteLine("FELICIDADES, SI PUEDES ENTRAR\n"); 
 }
 else
 {
-    Console.WriteLine("NO, NO PUEDES ENTRAR (estas muy chavo)");
+    Console.WriteLine("NO, NO PUEDES ENTRAR (estas muy chavo)\n");
 }
 
+Console.WriteLine("*3 Oferta del 10%\n");
+Console.WriteLine("Ingresa el precio del producto para aplicar oferta 10%");
+int precio = Convert.ToInt32(Console.ReadLine());
 
+if (precio >= 100)
+{
+    float descuento = (precio * 0.10f);
+    float pfinal = (precio - descuento);
+    Console.WriteLine($"Tu producto queda como: {pfinal}\n");   
+}
+else
+{
+    Console.WriteLine($"Tu producto queda en {precio} no aplica descuento\n");
+}
