@@ -1,4 +1,6 @@
-﻿Console.WriteLine("BIEVENIDO AL SISTEMA DE CONDICIONES\n\n");
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+Console.WriteLine("BIEVENIDO AL SISTEMA DE CONDICIONES\n\n");
 
 Console.WriteLine("*1 El mayor de 3 números\n");
 Console.WriteLine("Ingrese el primer numero: ");
@@ -64,3 +66,24 @@ else
     Console.WriteLine("Acceso denegado. Usuario o contraseña incorrectos.\n");
 }
 
+Console.WriteLine("*5 Determinar si tu numero es par o impar\n");
+try
+{
+    Console.WriteLine("* Determinar si tu numero es par o impar\n");
+    Console.WriteLine("Ingresa tu numero:");
+    int pexs = Convert.ToInt32(Console.ReadLine());
+
+    if (pexs % 2 == 0)
+    {
+        Console.WriteLine($"El número {pexs} es par.");
+    }
+    else
+    {
+        Console.WriteLine($"El número {pexs} es impar.");
+    }
+}
+catch (FormatException)
+{
+    Console.WriteLine("Error: Por favor, ingresa un número válido.");
+}
+    
