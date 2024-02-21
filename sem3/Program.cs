@@ -18,6 +18,17 @@ else
     Console.WriteLine($"El mayor es : {n3}\n\n");
 }
 
+Console.WriteLine("*2 Entrar al club\n");
+Console.WriteLine("Ingresa tu edad: ");
+int edad = Convert.ToInt32(Console.ReadLine());
 
+if (edad >= 18)
+{
+    Console.WriteLine("FELICIDADES, SI PUEDES ENTRAR"); 
+}
+else
+{
+    Console.WriteLine("NO, NO PUEDES ENTRAR (estas muy chavo)");
+}
 
 
