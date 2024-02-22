@@ -107,4 +107,34 @@ try
     Console.WriteLine("Error: Por favor, ingrese un número válido.\n");
 }
 
+try
+{
+    Console.WriteLine("*4 Busquemos tu \n");
+    Console.WriteLine("Ingrese el tipo de servicio (español, ingles, francés):");
+    string idioma = Console.ReadLine().ToLower();
+    string mensaje;
+
+    switch (idioma)
+    {
+        case "español":
+            mensaje = "BIEVENIDO AL SISTEMA DE SWITCH, ESPERO TE GUSTE";
+            break;
+        case "ingles":
+            mensaje = "WELCOME TO THE SWITCH SYSTEM, I HOPE YOU LIKE IT";
+            break;
+        case "frances":
+            mensaje = "frances";
+            break;
+        default:
+            Console.WriteLine("BIENVENUE SUR LE SYSTÈME SWITCH, J'ESPÈRE QUE VOUS L'AIMEZ");
+            return;
+    }
+
+    Console.WriteLine(mensaje);
+
+}
+catch (FormatException)
+{
+    Console.WriteLine("Error: Por favor, ingrese un número válido.\n");
+}
 
