@@ -73,9 +73,38 @@ try
             return;
     }
     Console.WriteLine($"El día que dijiste es: {dayfinal}\n");
-}
-catch (FormatException)
+}catch (FormatException)
 {
     Console.WriteLine("Error: Por favor, ingrese un número válido.\n");
 }
+
+try
+{
+    Console.WriteLine("*3 Veamos tu servicio\n");
+    Console.WriteLine("Ingrese el tipo de servicio (lavado de auto, cambio de aceite, revisión mecánica):");
+    string servi = Console.ReadLine().ToLower();
+    double importe;
+
+    switch (servi)
+    {
+        case "lavado de auto":
+            importe = 40.0; 
+            break;
+        case "cambio de aceite":
+            importe = 120.0; 
+            break;
+        case "revisión mecánica":
+            importe = 300.0; 
+            break;
+        default:
+            Console.WriteLine("Servicio no reconocido.");
+            return;
+    }
+
+    Console.WriteLine($"El importe a pagar por el servicio de {servi} es: Q{importe}");
+}catch (FormatException)
+{
+    Console.WriteLine("Error: Por favor, ingrese un número válido.\n");
+}
+
 
