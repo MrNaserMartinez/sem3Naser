@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 Console.WriteLine("BIEVENIDO AL SISTEMA DE SWITCH\n\n");
 
@@ -27,13 +28,54 @@ try
             digi = 5;
             break;
         default:
-            Console.WriteLine("Número no reconocido.");
+            Console.WriteLine("Número no reconocido.\n");
             return;
     }
 
-    Console.WriteLine($"El número en dígitos es: {digi}");
+    Console.WriteLine($"El número en dígitos es: {digi}\n");
+}catch (FormatException)
+{
+    Console.WriteLine("Error: Por favor, ingrese un número válido.\n");
+}
+
+try
+{
+    Console.WriteLine("*2 El día de la semana\n");
+    Console.WriteLine("Pon un numero del 1 al 7 para ver tu día");
+    int dian = Convert.ToInt32(Console.ReadLine());
+    string dayfinal;
+
+    switch (dian)
+    {
+        case 1:
+            dayfinal = "lunes";
+            break;
+        case 2:
+            dayfinal = "martes";
+            break;
+        case 3:
+            dayfinal = "miercoles";
+            break;
+        case 4:
+            dayfinal = "jueves";
+            break;
+        case 5:
+            dayfinal = "viernes";
+            break;
+        case 6:
+            dayfinal = "sabado";
+            break;
+        case 7:
+            dayfinal = "domingo";
+            break;
+        default:
+            Console.WriteLine("Número no reconocido.\n");
+            return;
+    }
+    Console.WriteLine($"El día que dijiste es: {dayfinal}\n");
 }
 catch (FormatException)
 {
-    Console.WriteLine("Error: Por favor, ingrese un número válido.");
+    Console.WriteLine("Error: Por favor, ingrese un número válido.\n");
 }
+
