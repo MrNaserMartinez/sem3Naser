@@ -109,7 +109,7 @@ try
 
 try
 {
-    Console.WriteLine("*4 Busquemos tu \n");
+    Console.WriteLine("*4 Busquemos tu servicio \n");
     Console.WriteLine("Ingrese el tipo de servicio (español, ingles, francés):");
     string idioma = Console.ReadLine().ToLower();
     string mensaje;
@@ -138,3 +138,40 @@ catch (FormatException)
     Console.WriteLine("Error: Por favor, ingrese un número válido.\n");
 }
 
+try
+{
+    Console.WriteLine("*5 Veamos tu desempeño \n");
+    Console.WriteLine("Ingrese la calificación del examen:");
+    int calificacion = Convert.ToInt32(Console.ReadLine());
+
+    string desempeno;
+
+    switch (calificacion)
+    {
+        case int n when (n >= 90 && n <= 100):
+            desempeno = "Sobresaliente";
+            break;
+        case int n when (n >= 80 && n <= 89):
+            desempeno = "Notable";
+            break;
+        case int n when (n >= 70 && n <= 79):
+            desempeno = "Aprobatoria";
+            break;
+        case int n when (n >= 60 && n <= 69):
+            desempeno = "No aprobatoria";
+            break;
+        case int n when (n <=59):
+            desempeno = "A ver amigo, tienes que mejorar, yo se que se puede, no te deprimas\n no es el fin del mundo";
+            break;
+        default:
+            Console.WriteLine("Calificación no válida.");
+            return;
+    }
+
+    Console.WriteLine($"Tu desempeño en el examen es: {desempeno}\n");
+
+}
+catch (FormatException)
+{
+    Console.WriteLine("Error: Por favor, ingrese un número válido.\n");
+}
